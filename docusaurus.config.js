@@ -6,25 +6,20 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Airy个人生活',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Airy',
+  tagline: 'Over the mountains,mountains',
+  url: 'https://airy.ink',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  noIndex: true,
+  organizationName: 'facebook',
+  projectName: 'docusaurus',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-CN',
+    locales: ['zh-CN'],
   },
 
   presets: [
@@ -34,17 +29,16 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          breadcrumbs: true,
+          // editUrl:
+          // 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -53,78 +47,155 @@ const config = {
     ],
   ],
 
+  // 搜索框
+  // themes: [
+  //   // ... Your other themes.
+  //   [
+  //     require.resolve("@easyops-cn/docusaurus-search-local"),
+  //     {
+  //       // ... Your options.
+  //       // `hashed` is recommended as long-term-cache of index file is possible.
+  //       hashed: true,
+  //       // For Docs using Chinese, The `language` is recommended to set to:
+  //       // ```
+  //       language: ["en", "zh"],
+  //       docsRouteBasePath: "/docs",
+  //       docsDir: "docs",
+  //       indexDocs: true,
+  //       indexPages: true,
+  //       removeDefaultStopWordFilter: true,
+  //       removeDefaultStemmer: true,
+  //       highlightSearchTermsOnTargetPage: true,
+  //       explicitSearchResultPath: true,
+  //       searchResultLimits: 10,
+  //       searchResultContextMaxLength: 55,
+  //       // ```
+  //     },
+  //   ],
+  // ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // 页眉
       navbar: {
-        title: 'My Site',
+        title: '大家都是倔强的人',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Airy',
+          src: 'img/logo.png',
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
+            label: "首页",
+            position: "left",
+            to: "/",
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+
+          // 文档
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
+            label: 'docs',
+            to: 'docs/intro',
+            position: 'left'
           },
+
+          // 博客
+          {
+            label: 'Blog',
+            to: '/blog',
+            position: 'left'
+          },
+
+          // 中英切换导航
+          // {
+          //   type: 'localeDropdown',
+          //   position: 'right',
+          // },
+
         ],
       },
+
+      // 页脚
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
+          // 文档
           {
-            title: 'Docs',
+            title: '本站',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'APP',
+                to: 'docs/APPintroduces',
               },
-            ],
+              {
+                label: '企业平台',
+                to: 'docs/introduces',
+              },
+              {
+                label: '物联网卡',
+                to: 'docs/IotSimCard',
+              },
+            ]
           },
+
           {
-            title: 'Community',
+            title: '本站',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'APP',
+                to: 'docs/APPintroduces',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: '企业平台',
+                to: 'docs/introduces',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: '物联网卡',
+                to: 'docs/IotSimCard',
               },
-            ],
+            ]
           },
+
+          // 友情链接：
           {
-            title: 'More',
+            title: '友情链接：',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Airy的个人生活',
+                href: 'https://www.blairwj.cn/',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
+                label: '丹恪梦的个人博客',
+                href: 'https://www.hinay.cn/',
+              }
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `
+      <p>
+        <a href="http://beian.miit.gov.cn/" target="_blank" >
+          <strong>
+            鄂ICP备2022002437号
+          </strong>
+        </a>
+      </p>
+      <p>
+        Copyright © ${new Date().getFullYear()}
+        // <a href='http://airy.ink' target='_blank'>
+        <a href='https://www.blairwj.cn/' target='_blank'>
+          <img src='/img/logo.png' width='100px'>
+        </a>
+        All rights reserved.
+      </p>`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        },
       },
     }),
 };

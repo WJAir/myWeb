@@ -6,20 +6,40 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #3c92f0;
+  --ifm-color-primary-dark: #189596;
+  --ifm-color-primary-darker: #178d8e;
+  --ifm-color-primary-darkest: #137475;
+  --ifm-color-primary-light: #1eb7b8;
+  --ifm-color-primary-lighter: #1fbfc0;
+  --ifm-color-primary-lightest: #23d8d9;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-code-background: #23affc1a;
+  --ifm-code-color: #141c27;
+  --ifm-font-family-monospace: source-code-pro, Menlo, Monaco, Consolas,
+    "Courier New", monospace;
+  --ifm-container-width-xl: 1520px;
+  --docusaurus-highlighted-code-line-bg: rgb(235, 235, 235);
+
+  /* 搜索模块 */
+  --search-local-modal-background: #f5f6f7;
+  --search-local-modal-width: 550px;
+  --search-local-modal-width-sm: 340px;
+  --search-local-spacing: 12px;
+  --search-local-hit-background: #fff;
+  --search-local-hit-shadow: 0 1px 3px 0 #d4d9e1;
+  --search-local-hit-color: #000;
+  --search-local-hit-height: 56px;
+  --search-local-highlight-color: #3c92f0;
+  --search-local-muted-color: rgb(46, 48, 49);
+  --search-local-icon-stroke-width: 1.4;
+  --search-local-hit-active-color: var(--ifm-color-white);
+  --search-local-modal-shadow: inset 1px 1px 0 0 hsla(0, 0%, 66%, 0.5),
+    0 3px 8px 0 #53606e;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
+[data-theme="dark"] {
+  --ifm-color-primary: #3c92f0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
@@ -27,4 +47,39 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Color which works with dark mode syntax highlighting theme */
+  --docusaurus-highlighted-code-line-bg: rgb(49, 43, 58);
+
+  /* 搜索模块 */
+  --search-local-modal-width: 550px;
+  --search-local-highlight-color: #2d4a6a;
+  --search-local-icon-stroke-width: 1.4;
+  --search-local-hit-color: #fff;
+  --search-local-modal-shadow: inset 1px 1px 0 0 hsla(0, 0%, 100%, 0.5),
+    0 3px 8px 0 #53606e;
+  --search-local-modal-background: #31363b;
+  --search-local-hit-background: #b3b6b9;
+  --search-local-muted-color: rgb(255, 255, 255);
+  --search-local-hit-color: #fff;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme="dark"] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: center;
+  align-content: space-around;
+  min-height: 50vh;
+  background-color: var(--ifm-background-color);
 }
