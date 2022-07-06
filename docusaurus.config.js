@@ -48,53 +48,47 @@ const config = {
   ],
 
   // 搜索框
-  // themes: [
-  //   // ... Your other themes.
-  //   [
-  //     require.resolve("@easyops-cn/docusaurus-search-local"),
-  //     {
-  //       // ... Your options.
-  //       // `hashed` is recommended as long-term-cache of index file is possible.
-  //       hashed: true,
-  //       // For Docs using Chinese, The `language` is recommended to set to:
-  //       // ```
-  //       language: ["en", "zh"],
-  //       docsRouteBasePath: "/docs",
-  //       docsDir: "docs",
-  //       indexDocs: true,
-  //       indexPages: true,
-  //       removeDefaultStopWordFilter: true,
-  //       removeDefaultStemmer: true,
-  //       highlightSearchTermsOnTargetPage: true,
-  //       explicitSearchResultPath: true,
-  //       searchResultLimits: 10,
-  //       searchResultContextMaxLength: 55,
-  //       // ```
-  //     },
-  //   ],
-  // ],
+  themes: [
+    // ... Your other themes.
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        // For Docs using Chinese, The `language` is recommended to set to:
+        // ```
+        language: ["en", "zh"],
+        docsRouteBasePath: "/docs",
+        docsDir: "docs",
+        indexDocs: true,
+        indexPages: true,
+        removeDefaultStopWordFilter: true,
+        removeDefaultStemmer: true,
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        searchResultLimits: 10,
+        searchResultContextMaxLength: 55,
+        // ```
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // 页眉
       navbar: {
-        title: '大家都是倔强的人',
+        title: '',
         logo: {
           alt: 'Airy',
-          src: 'img/logo.png',
+          src: 'img/mainLogo.png',
         },
         items: [
-          {
-            label: "首页",
-            position: "left",
-            to: "/",
-          },
-
           // 文档
           {
-            label: 'docs',
-            to: 'docs/intro',
+            label: '一些记录',
+            to: 'docs/about',
             position: 'left'
           },
 
@@ -122,36 +116,13 @@ const config = {
           {
             title: '本站',
             items: [
-              {
-                label: 'APP',
-                to: 'docs/APPintroduces',
-              },
-              {
-                label: '企业平台',
-                to: 'docs/introduces',
-              },
-              {
-                label: '物联网卡',
-                to: 'docs/IotSimCard',
-              },
             ]
           },
 
           {
             title: '本站',
             items: [
-              {
-                label: 'APP',
-                to: 'docs/APPintroduces',
-              },
-              {
-                label: '企业平台',
-                to: 'docs/introduces',
-              },
-              {
-                label: '物联网卡',
-                to: 'docs/IotSimCard',
-              },
+
             ]
           },
 
@@ -180,9 +151,9 @@ const config = {
       </p>
       <p>
         Copyright © ${new Date().getFullYear()}
-        // <a href='http://airy.ink' target='_blank'>
+        <a href='http://airy.ink' target='_blank'>
         <a href='https://www.blairwj.cn/' target='_blank'>
-          <img src='/img/logo.png' width='100px'>
+          <img src='/img/mainLogo.png' width='130px'>
         </a>
         All rights reserved.
       </p>`,
