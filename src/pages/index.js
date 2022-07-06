@@ -40,9 +40,11 @@ function HomepageHeader() {
               styles.getStarted, styles.mains, styles.scale
             )}
             to={""}>
-            <a>
-              <img className={styles.QRcode} src="img/pub/WeChat.png" alt="APP" />
-              <img className={styles.logo} src='img/icon/微信.svg'></img>
+            <a class="mains_F6NS">
+              <a>
+                <img className={styles.QRcode} src="img/pub/WeChat.png" alt="APP" />
+                <img className={styles.logo} src='img/icon/微信.svg'></img>
+              </a>
             </a>
           </Link>
 
@@ -52,11 +54,9 @@ function HomepageHeader() {
               styles.getStarted, styles.mains, styles.scale
             )}
             to={""}>
-            <a class="button--outline button--secondary button--lg getStarted_D36F mains_F6NS">
-              <a>
-                <img className={styles.QRcode} src="img/pub/公众号.jpg" alt="公众号" />
-                <img className={styles.logo} src='img/icon/微信公众号.svg'></img>
-              </a>
+            <a>
+              <img className={styles.QRcode} src="img/pub/公众号.jpg" alt="公众号" />
+              <img className={styles.logo} src='img/icon/微信公众号.svg'></img>
             </a>
           </Link>
         </div>
