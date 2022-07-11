@@ -25,20 +25,43 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
+      // /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           breadcrumbs: true,
-          // editUrl:
-          // 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editLocalizedFiles: false,
+          blogTitle: 'Blog title',
+          blogDescription: 'Blog',
+          blogSidebarCount: 10,
+          blogSidebarTitle: 'Life',
+          routeBasePath: 'blog',
+          include: ['**/*.{md,mdx}'],
+          exclude: [
+            '**/_*.{js,jsx,ts,tsx,md,mdx}',
+            '**/_*/**',
+            '**/*.test.{js,jsx,ts,tsx}',
+            '**/__tests__/**',
+          ],
+          postsPerPage: 10,
+          blogListComponent: '@theme/BlogListPage',
+          blogPostComponent: '@theme/BlogPostPage',
+          blogTagsListComponent: '@theme/BlogTagsListPage',
+          blogTagsPostsComponent: '@theme/BlogTagsPostsPage',
+          rehypePlugins: [],
+          beforeDefaultRemarkPlugins: [],
+          beforeDefaultRehypePlugins: [],
+          truncateMarker: /<!--s*(truncate)s*-->/,
+          feedOptions: {
+            type: 'all',
+            title: '',
+            description: '',
+            copyright: '',
+            language: undefined,
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -61,7 +84,9 @@ const config = {
         language: ["en", "zh"],
         docsRouteBasePath: "/docs",
         docsDir: "docs",
+        blogDir: "blog",
         indexDocs: true,
+        indexBlog: true,
         indexPages: true,
         removeDefaultStopWordFilter: true,
         removeDefaultStemmer: true,
@@ -88,15 +113,34 @@ const config = {
           // 文档
           {
             label: '一些记录',
-            to: 'docs/about',
-            position: 'left'
+            to: 'docs/abouts',
+            position: 'right',
           },
-
+          {
+            label: '关于',
+            to: 'docs/about',
+            position: 'right'
+          },
           // 博客
           {
-            label: 'Blog',
+            label: '日记',
             to: '/blog',
-            position: 'left'
+            position: 'right'
+          },
+
+          {
+            label: '友情链接',
+            position: 'right',
+            items: [
+              {
+                label: 'Airy的个人生活',
+                href: 'https://www.blairwj.cn/',
+              },
+              {
+                label: '丹恪梦的个人博客',
+                href: 'https://www.hinay.cn/',
+              }
+            ],
           },
 
           // 中英切换导航
@@ -112,48 +156,19 @@ const config = {
       footer: {
         style: 'light',
         links: [
-          // 文档
-          {
-            title: '本站',
-            items: [
-            ]
-          },
 
-          {
-            title: '本站',
-            items: [
-
-            ]
-          },
-
-          // 友情链接：
-          {
-            title: '友情链接：',
-            items: [
-              {
-                label: 'Airy的个人生活',
-                href: 'https://www.blairwj.cn/',
-              },
-              {
-                label: '丹恪梦的个人博客',
-                href: 'https://www.hinay.cn/',
-              }
-            ],
-          },
         ],
         copyright: `
-      <p>
+      <p class="foot">
         <a href="http://beian.miit.gov.cn/" target="_blank" >
           <strong>
             鄂ICP备2022002437号
           </strong>
         </a>
-      </p>
-      <p>
         Copyright © ${new Date().getFullYear()}
         <a href='http://airy.ink' target='_blank'>
         <a href='https://www.blairwj.cn/' target='_blank'>
-          <img src='/img/mainLogo.png' width='130px'>
+          <font color='' size='4' face='华文行楷'>大家都是倔强的人</font>
         </a>
         All rights reserved.
       </p>`,

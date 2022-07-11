@@ -1,8 +1,10 @@
 .welcome_intro {
   width: 50vw;
-  padding: 3rem 5rem 0 0;
+  padding: 0rem 5rem 0 0;
   text-align: center;
+  align-items: center;
 }
+
 .welcome_intro p {
   font-size: 1.5rem;
 }
@@ -55,7 +57,7 @@
   transform: scale(1);
   transform-origin: top center;
   opacity: 0;
-  border: 1px solid #1296db;
+  border: 1px solid #05547e;
   border-radius: 0.25rem;
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -72,3 +74,4 @@
   width: 50px;
   height: 50px;
 }
+
