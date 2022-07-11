@@ -79,11 +79,16 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 .hero {
   display: flex;
   flex-wrap: wrap;
-  padding: 80px 0;
+  /* padding: 80px 0; */
   justify-content: center;
   align-content: space-around;
   min-height: 50vh;
   background-color: var(--ifm-background-color);
+}
+
+.footer {
+  margin: 0;
+  padding: 10px;
 }
 
 .foot {

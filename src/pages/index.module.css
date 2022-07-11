@@ -10,6 +10,7 @@
 .welcome_svg {
   height: 25vw;
   overflow: hidden;
+  padding: 0 0 0 0;
 }
 
 .hero_title {
