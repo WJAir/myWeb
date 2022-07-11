@@ -1,5 +1,5 @@
 :root {
-  --ifm-color-primary: #3c92f0;
+  --ifm-color-primary: #00bfa6;
   --ifm-color-primary-dark: #189596;
   --ifm-color-primary-darker: #178d8e;
   --ifm-color-primary-darkest: #137475;
@@ -32,15 +32,15 @@
 }
 
 [data-theme="dark"] {
-  --ifm-color-primary: #3c92f0;
+  --ifm-color-primary: #00bfa6;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  /* Color which works with dark mode syntax highlighting theme */
   --docusaurus-highlighted-code-line-bg: rgb(49, 43, 58);
 
   /* 搜索模块 */
@@ -67,21 +67,25 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.main-wrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
 .hero {
   display: flex;
   flex-wrap: wrap;
-  padding: 70px 0;
+  padding: 80px 0;
   justify-content: center;
   align-content: space-around;
   min-height: 50vh;
   background-color: var(--ifm-background-color);
 }
 
-.footer {
-  margin: 0;
-}
-
 .foot {
   margin: 0;
-  padding: 0;
 }

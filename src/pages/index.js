@@ -53,8 +53,8 @@ function HomepageHeader() {
           </Link>
         </div>
       </div>
-      <div className={styles.welcome_svg}>
-        <img src={useBaseUrl("/img/main.svg")} />
+      <div>
+        <img src={useBaseUrl("/img/mains.svg")} className={styles.welcome_svg} />
       </div>
     </div >
   );
