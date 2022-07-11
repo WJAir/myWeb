@@ -30,7 +30,7 @@
     font-size: 1.8rem;
     text-align: center;
   }
-  .welcome_svg img {
+  .welcome_svg {
     width: 50vh;
     height: 50vh;
   }
