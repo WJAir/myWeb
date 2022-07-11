@@ -13,10 +13,12 @@ function HomepageHeader() {
   return (
     <div className="hero">
       <div className={styles.welcome_intro}>
+        <h1 className={styles.hero_titles}>大家都是倔强的人</h1>
         <h1 className={styles.hero_title}>
-          <span
-            style={{ color: 'var(--ifm-color-primary)' }}
-          >Over the mountains,mountains</span></h1>
+          <span style={{ color: 'var(--ifm-color-primary)' }}>
+            Over the mountains,mountains
+          </span>
+        </h1>
         <p className="hero__subtitle">
           很早就有写些什么的想法，关于自己，关于他们，只是，每到刚要下笔的时候，却又不知从何说起，很多事，找不到合适的语言来表达，
           我不知道我这已经过了的二十多年，是该如何的，那些犯过的错，遇见的人，说过的话，好像都变得模糊了。
@@ -54,7 +56,7 @@ function HomepageHeader() {
         </div>
       </div>
       <div>
-        <img src={useBaseUrl("/img/mains.svg")} className={styles.welcome_svg} />
+        <img src="/img/mains.svg" alt='飞离地球！！！' title='飞离地球！！！' className={styles.welcome_svg} />
       </div>
     </div >
   );

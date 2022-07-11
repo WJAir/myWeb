@@ -107,7 +107,7 @@ const config = {
         title: '',
         logo: {
           alt: 'Airy',
-          src: 'img/mainLogo.png',
+          src: 'img/favicon.ico',
         },
         items: [
           // 文档

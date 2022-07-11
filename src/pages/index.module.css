@@ -17,6 +17,12 @@
   text-align: center;
 }
 
+.hero_titles {
+  font-size: calc((100vw / 150) + 36px);
+  text-align: center;
+  font-family: "华文行楷";
+}
+
 .buttons {
   display: flex;
   align-items: center;
