@@ -115,6 +115,12 @@ const config = {
             label: '一些记录',
             to: 'docs/abouts',
             position: 'right',
+            items: [
+              {
+                label: "图",
+                to: "hello"
+              }
+            ]
           },
           {
             label: '关于',
@@ -162,9 +168,11 @@ const config = {
       <p class="foot">
         <a href="http://beian.miit.gov.cn/" target="_blank" >
           <strong>
-            鄂ICP备2022002437号
+            鄂ICP备2022002437号-1
           </strong>
         </a>
+      </p>
+      <p class="foot">
         Copyright © ${new Date().getFullYear()}
         <a href='http://airy.ink' target='_blank'>
         <a href='https://www.blairwj.cn/' target='_blank'>
