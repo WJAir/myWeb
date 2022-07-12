@@ -74,7 +74,7 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
   display: -webkit-flex;
   -webkit-justify-content: space-around;
   justify-content: space-around;
-  /* align-items: center; */
+  align-items: center;
 }
 
 .hero {
