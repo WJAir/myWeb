@@ -34,7 +34,7 @@ const config = {
         blog: {
           showReadingTime: true,
           editLocalizedFiles: false,
-          blogTitle: 'Blog title',
+          blogTitle: 'Airy’s blog',
           blogDescription: 'Blog',
           blogSidebarCount: 10,
           blogSidebarTitle: 'Life',
@@ -117,9 +117,13 @@ const config = {
             position: 'right',
             items: [
               {
-                label: "图",
-                to: "hello"
-              }
+                label: "img",
+                to: "hello",
+              },
+              {
+                label: "video",
+                to: "docs/video1",
+              },
             ]
           },
           {

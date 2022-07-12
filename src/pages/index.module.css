@@ -170,7 +170,7 @@
 }
 
 .box:hover {
-  flex-basis: 60%;
+  flex-basis: 40%;
 }
 
 .box:hover > img {
