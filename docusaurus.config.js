@@ -180,9 +180,9 @@ const config = {
         Copyright © ${new Date().getFullYear()}
         <a href='http://airy.ink' target='_blank'>
         <a href='https://www.blairwj.cn/' target='_blank'>
-          <font color='' size='4' face='华文行楷'>大家都是倔强的人</font>
+          <font color='' size='4' face='华文行楷'>Airy</font>
         </a>
-        All rights reserved.
+        Built with Docusaurus.
       </p>`,
       },
       prism: {
