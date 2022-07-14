@@ -57,9 +57,10 @@
     font-size: 1.2rem;
   }
 
+  /* 图页 */
   .shell {
     width: 90%;
-    height: 500px;
+    height: 700px;
     display: flex;
   }
 
@@ -92,8 +93,12 @@
     align-items: center;
   }
 
+  .img {
+    width: 25px;
+  }
+
   .box:hover {
-    flex-basis: 40%;
+    flex-basis: 60%;
   }
 
   .box:hover > img {
@@ -102,6 +107,7 @@
   }
 }
 
+/* 二维码显示 */
 .mains {
   position: relative;
 }
@@ -134,6 +140,7 @@
   height: 50px;
 }
 
+/* 图页 */
 .shell {
   width: 90%;
   height: 850px;
@@ -165,8 +172,12 @@
   height: 5%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   margin-top: -5px;
+}
+
+.boxIcon {
+  width: 30px;
 }
 
 .box:hover {
