@@ -122,7 +122,7 @@
   transform: scale(1);
   transform-origin: top center;
   opacity: 0;
-  border: 1px solid #1296db;
+  border: 1px solid var(--ifm-color-primary);
   border-radius: 0.25rem;
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
