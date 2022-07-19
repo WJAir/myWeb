@@ -208,7 +208,7 @@ const config = {
       announcementBar: {
         id: 'support_us',
         content:
-          `<a class="announcement_link" target="_self"  href="./video1">🎃 世界的尽头 🗿</a>`,
+          `<a class="announcement_link" target="_self"  href="/docs/video1">🎃 世界的尽头 🗿</a>`,
         backgroundColor: '#ace0f9',
         textColor: '#091E42',
         isCloseable: true,
