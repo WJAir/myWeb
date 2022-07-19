@@ -95,3 +95,27 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 .foot {
   margin: 0;
 }
+
+.announcement_link:link {
+  text-decoration: none;
+  font-size: 15px;
+  color: #000;
+  display: block;
+  padding: 0;
+}
+
+.announcement_link:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+.announcement_link:hover {
+  text-decoration: none;
+  font-size: 17px;
+  color: #e66e28;
+}
+
+.announcement_link:active {
+  text-decoration: none;
+  color: #f6f3ff;
+}

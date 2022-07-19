@@ -1,9 +1,3 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
-
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Airy',
@@ -72,15 +66,10 @@ const config = {
 
   // 搜索框
   themes: [
-    // ... Your other themes.
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
-        // ... Your options.
-        // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
-        // For Docs using Chinese, The `language` is recommended to set to:
-        // ```
         language: ["en", "zh"],
         docsRouteBasePath: "/docs",
         docsDir: "docs",
@@ -94,7 +83,6 @@ const config = {
         explicitSearchResultPath: true,
         searchResultLimits: 10,
         searchResultContextMaxLength: 55,
-        // ```
       },
     ],
   ],
@@ -104,50 +92,54 @@ const config = {
     ({
       // 页眉
       navbar: {
-        title: '',
-        logo: {
-          alt: 'Airy',
-          src: 'img/mine_logo.png',
-        },
+        title: '📷Airy',
+        // logo: {
+        //   alt: 'Airy',
+        //   src: '',
+        // },
         items: [
-          // 文档
           {
-            label: '一些记录',
+            label: "🥟",
+            position: "right",
+            to: "/",
+          },
+          {
+            label: '📒记录',
             to: 'docs/abouts',
             position: 'right',
             items: [
               {
-                label: "img",
+                label: "🖼️img",
                 to: "hello",
               },
               {
-                label: "video",
+                label: "🎞️video",
                 to: "docs/video1",
               },
             ]
           },
           {
-            label: '关于',
+            label: '🧛🏻关于',
             to: 'docs/about',
             position: 'right'
           },
           // 博客
           {
-            label: '日记',
+            label: '📜日记',
             to: '/blog',
             position: 'right'
           },
 
           {
-            label: '友情链接',
+            label: '👨🏼‍🤝‍👨🏻友情链接',
             position: 'right',
             items: [
               {
-                label: 'Airy的个人生活',
+                label: '👦🏻Airy的个人生活',
                 href: 'https://www.blairwj.cn/',
               },
               {
-                label: '丹恪梦的个人博客',
+                label: '👨🏻‍🦱丹恪梦的个人博客',
                 href: 'https://www.hinay.cn/',
               }
             ],
@@ -186,14 +178,40 @@ const config = {
       </p>`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        // theme: require('prism-react-renderer/themes/github'),
+        theme: require('prism-react-renderer/themes/dracula'),
+        // darkTheme: require('prism-react-renderer/themes/dracula');,
+        additionalLanguages: ['lua'],
       },
+
+      // 侧边栏
       docs: {
         sidebar: {
           hideable: true,
           autoCollapseCategories: true,
         },
+      },
+
+      // 代码在线编辑
+      liveCodeBlock: {
+        playgroundPosition: 'bottom',
+      },
+
+      // 主题模式
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
+
+      // 公告条
+      announcementBar: {
+        id: 'support_us',
+        content:
+          `<a class="announcement_link" target="_self"  href="./video1">🎃 世界的尽头 🗿</a>`,
+        backgroundColor: '#ace0f9',
+        textColor: '#091E42',
+        isCloseable: true,
       },
     }),
 };
