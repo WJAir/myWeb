@@ -8,9 +8,9 @@
 }
 
 .welcome_svg {
-  height: 25vw;
+  height: 15vw;
   overflow: hidden;
-  padding: 0 0 0 0;
+  padding: 0;
 }
 
 .hero_title {
@@ -30,6 +30,12 @@
   border: 0;
 }
 
+.about_button {
+  margin-top: 48px;
+  justify-content: space-around;
+  transform: translate(0, -3px);
+}
+
 @media screen and (max-width: 996px) {
   .main-wrapper {
     margin: 0;
@@ -45,14 +51,17 @@
     font-size: 1.8rem;
     text-align: center;
   }
+
   .welcome_svg {
     width: 90vw;
     height: 90vw;
   }
+
   .welcome_intro {
     width: auto;
     padding: 0 1rem 0 1rem;
   }
+
   .welcome_intro p {
     font-size: 1.2rem;
   }
