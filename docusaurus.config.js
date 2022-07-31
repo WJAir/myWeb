@@ -24,6 +24,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           breadcrumbs: true,
+          sidebarCollapsed: true,
         },
         blog: {
           showReadingTime: true,
@@ -90,93 +91,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // 页眉
-      navbar: {
-        title: '📷Airy',
-        // logo: {
-        //   alt: 'Airy',
-        //   src: '',
-        // },
-        items: [
-          {
-            label: "🥟",
-            position: "right",
-            to: "/",
-          },
-          {
-            label: '📒记录',
-            to: 'docs/abouts',
-            position: 'right',
-            items: [
-              {
-                label: "🖼️img",
-                to: "hello",
-              },
-              {
-                label: "🎞️video",
-                to: "docs/video1",
-              },
-            ]
-          },
-          {
-            label: '🧛🏻关于',
-            to: 'docs/about',
-            position: 'right'
-          },
-          // 博客
-          {
-            label: '📜日记',
-            to: '/blog',
-            position: 'right'
-          },
-
-          {
-            label: '👨🏼‍🤝‍👨🏻友情链接',
-            position: 'right',
-            items: [
-              {
-                label: '👦🏻Airy的个人生活',
-                href: 'https://www.blairwj.cn/',
-              },
-              {
-                label: '👨🏻‍🦱丹恪梦的个人博客',
-                href: 'https://www.hinay.cn/',
-              }
-            ],
-          },
-
-          // 中英切换导航
-          // {
-          //   type: 'localeDropdown',
-          //   position: 'right',
-          // },
-
-        ],
-      },
-
-      // 页脚
-      footer: {
-        style: 'light',
-        links: [
-
-        ],
-        copyright: `
-      <p class="foot">
-        <a href="http://beian.miit.gov.cn/" target="_blank" >
-          <strong>
-            鄂ICP备2022002437号-1
-          </strong>
-        </a>
-      </p>
-      <p class="foot">
-        Copyright © ${new Date().getFullYear()}
-        <a href='http://airy.ink' target='_blank'>
-        <a href='https://www.blairwj.cn/' target='_blank'>
-          <font color='' size='4' face='华文行楷'>Airy</font>
-        </a>
-        Built with Docusaurus.
-      </p>`,
-      },
       prism: {
         // theme: require('prism-react-renderer/themes/github'),
         theme: require('prism-react-renderer/themes/dracula'),
@@ -211,7 +125,101 @@ const config = {
           `<a class="announcement_link" target="_self"  href="/docs/video1">🎃 世界的尽头 🗿</a>`,
         backgroundColor: '#ace0f9',
         textColor: '#091E42',
-        isCloseable: true,
+        isCloseable: false,
+      },
+      // 导航栏
+      navbar: {
+        title: 'Over the mountains,mountains',
+        // logo: {
+        //   alt: 'Airy',
+        //   src: '',
+        // },
+        hideOnScroll: true,
+        items: [
+          {
+            label: '关于',
+            to: 'docs/about',
+            position: 'left'
+          },
+
+          {
+            label: '记录',
+            to: 'docs/abouts',
+            position: 'left',
+          },
+
+          // 博客
+          {
+            label: '日记',
+            to: '/blog',
+            position: 'left',
+          },
+
+          // 友链
+          {
+            label: '友链',
+            position: 'left',
+            items: [
+              {
+                label: '👦🏻Airy的个人生活',
+                href: 'https://www.blairwj.cn/',
+              },
+              {
+                label: '👨🏻‍🦱丹恪梦的个人博客',
+                href: 'https://www.hinay.cn/',
+              }
+            ],
+          },
+
+          // 图页
+          {
+            type: 'html',
+            position: 'left',
+            value: '<a href="/hello"><button class="button button--outline button--primary" >Img</button></a>',
+          },
+
+          // video
+          {
+            type: 'html',
+            position: 'left',
+            value: '<a href="/docs/video1"><button class="button button--outline button--primary" >Video</button></a>',
+          },
+          // 搜索
+          {
+            type: 'search',
+            position: 'right',
+          },
+
+          // 中英切换导航
+          // {
+          //   type: 'localeDropdown',
+          //   position: 'right',
+          // },
+
+        ],
+      },
+
+      // 页脚
+      footer: {
+        style: 'light',
+        links: [
+
+        ],
+        copyright: `
+      <p class="foot">
+        <a href="http://beian.miit.gov.cn/" target="_blank" >
+          <strong>
+            鄂ICP备2022002437号-1
+          </strong>
+        </a>
+      </p>
+      <p class="foot">
+        Copyright © ${new Date().getFullYear()}
+        <a href='mailto:Airy23@outlook.com' target='_blank'>
+          <font color='' size='4'> Airy23@outlook.com </font>
+        </a>
+        Built with <a href='https://www.docusaurus.cn/' target='_blank'>Docusaurus</a>.
+      </p>`,
       },
     }),
 };
