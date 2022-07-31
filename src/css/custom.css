@@ -1,9 +1,9 @@
 :root {
-  --ifm-color-primary: #3c92f0;
+  --ifm-color-primary: #1fbfc0;
   --ifm-color-primary-dark: #189596;
   --ifm-color-primary-darker: #178d8e;
   --ifm-color-primary-darkest: #137475;
-  --ifm-color-primary-light: #1eb7b8;
+  --ifm-color-primary-light: #178d8e;
   --ifm-color-primary-lighter: #1fbfc0;
   --ifm-color-primary-lightest: #23d8d9;
 
@@ -26,7 +26,7 @@
   --search-local-hit-shadow: 0 1px 3px 0 #d4d9e1;
   --search-local-hit-color: #000;
   --search-local-hit-height: 56px;
-  --search-local-highlight-color: #3c92f0;
+  --search-local-highlight-color: #178d8e;
   --search-local-muted-color: rgb(46, 48, 49);
   --search-local-icon-stroke-width: 1.4;
   --search-local-hit-active-color: var(--ifm-color-white);
@@ -34,20 +34,19 @@
     0 3px 8px 0 #53606e;
 }
 
-/* 黑暗模式已禁用 */
+/* 黑暗模式
 [data-theme="dark"] {
-  --ifm-color-primary: #3c92f0;
+  --ifm-color-primary: #1fbfc0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-light: #3c92f0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --docusaurus-highlighted-code-line-bg: rgb(49, 43, 58);
 
-  /* 搜索模块 */
   --search-local-modal-width: 550px;
   --search-local-highlight-color: #2d4a6a;
   --search-local-icon-stroke-width: 1.4;
@@ -58,7 +57,8 @@
   --search-local-hit-background: #b3b6b9;
   --search-local-muted-color: rgb(255, 255, 255);
   --search-local-hit-color: #fff;
-}
+} 
+ */
 
 .main-wrapper {
   margin: 0;
@@ -223,7 +223,7 @@ div[class^="expandButton_"] {
   margin: em 0;
   background: linear-gradient(
     90deg,
-    var(--ifm-color-primary-light) 11.3%,
+    var(--ifm-color-primary-light) 1%,
     var(--ifm-color-primary) 161.54%
   );
   box-shadow: 0px 0px 32px rgb(0 105 165 / 35%);
@@ -243,8 +243,8 @@ pagination-nav__item:hover .pagination-nav__link {
 .pagination-nav__item--next > .pagination-nav__link {
   background: linear-gradient(
     90deg,
-    var(--ifm-color-primary) 11.3%,
-    var(--ifm-color-primary-light) 161.54%
+    var(--ifm-color-primary) 161.54%,
+    var(--ifm-color-primary-light) 11.3%
   );
 }
 
