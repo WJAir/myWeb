@@ -105,7 +105,7 @@ div[class^="announcementBar_"] {
   );
 }
 
-.announcement_link:link {
+div[class^="announcementBar_"] .announcement_link {
   text-decoration: none;
   font-size: 16px;
   color: #fff;
@@ -113,13 +113,13 @@ div[class^="announcementBar_"] {
   padding: 0;
 }
 
-.announcement_link:hover {
+div[class^="announcementBar_"] .announcement_link:hover {
   text-decoration: none;
   font-size: 17px;
   color: #fff;
 }
 
-.announcement_link:active {
+div[class^="announcementBar_"] .announcement_link:active {
   text-decoration: none;
   color: #cb364a;
 }
