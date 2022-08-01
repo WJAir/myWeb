@@ -208,15 +208,13 @@ const config = {
         copyright: `
       <p class="foot">
         <a href="http://beian.miit.gov.cn/" target="_blank" >
-          <strong>
             鄂ICP备2022002437号-1
-          </strong>
         </a>
       </p>
       <p class="foot">
         Copyright © ${new Date().getFullYear()}
         <a href='mailto:Airy23@outlook.com' target='_blank'>
-          <font color='' size='4'> Airy23@outlook.com </font>
+          Airy23@outlook.com
         </a>
         Built with <a href='https://www.docusaurus.cn/' target='_blank'>Docusaurus</a>.
       </p>`,

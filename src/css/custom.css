@@ -89,7 +89,7 @@
 
 .foot a:hover {
   text-decoration: none;
-  color: var(--ifm-color-primary-lightest);
+  color: #3c92f0;
 }
 
 /* 公告条 */
