@@ -6,7 +6,7 @@ const sidebars = {
   ],
 
   视频: [
-    // "videos/video1"
+    "videos/video1"
   ],
 
   关于: [
