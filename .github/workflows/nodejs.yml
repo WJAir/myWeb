@@ -6,28 +6,25 @@ on:
       - main
 
 jobs:
-  build:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.15.0]
-
     steps:
-      - name: Get latest code
-        uses: actions/checkout@v2.3.2
-        with:
-          fetch-depth: 2
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 16
         uses: actions/setup-node@v2-beta
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: "16"
 
-      - run: npm install
-      - run: npm run build
+      - name: 🔨  Build Project
+        run: |
+          npm install
+          npm run build
 
-      - name: FTP Deploy
+      - name: ✈️ FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: wh-nbebvenxffvv9deim8r.my3w.com
