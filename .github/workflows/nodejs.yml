@@ -25,7 +25,7 @@ jobs:
       - run: npm run build --if-present
 
       - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.1.1
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           server: wh-nbebvenxffvv9deim8r.my3w.com
           username: ${{ secrets.FTP_USER }}
