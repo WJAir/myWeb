@@ -11,21 +11,21 @@ jobs:
 
     strategy:
       matrix:
-        node-version: '16.x'
+        node-version: "16.x"
 
     steps:
       - name: 🚚Get latest code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
 
       - name: 🪝Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
 
-     - name: 🔨Build Project
-        run: |
-          yarn install
-          yarn run build
+      - run: npm install
+      - run: npm run build
 
       - name: ✈️FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
