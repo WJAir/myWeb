@@ -18,7 +18,6 @@ jobs:
         npm install
         npm run build
   
-
       - name: ✈️ FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
