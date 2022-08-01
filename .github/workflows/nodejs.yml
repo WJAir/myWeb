@@ -1,64 +1,28 @@
-# name: Node.js CI
-
-# on:
-#   push:
-#     branches:
-#       - main
-
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-
-#     strategy:
-#       matrix:
-#         node-version: "16.x"
-
-#     steps:
-#       - name: 🚚Get latest code
-#         uses: actions/checkout@v3
-#         with:
-#           fetch-depth: 2
-
-#       - name: 🪝Use Node.js ${{ matrix.node-version }}
-#         uses: actions/setup-node@v2
-#         with:
-#           node-version: ${{ matrix.node-version }}
-
-#       - run: npm install
-#       - run: npm run build
-
-#       - name: ✈️FTP Deploy
-#         uses: SamKirkland/FTP-Deploy-Action@4.3.0
-#         with:
-#           server: wh-nbebvenxffvv9deim8r.my3w.com
-#           username: ${{ secrets.FTP_USER }}
-#           password: ${{ secrets.FTP_PWD }}
-#           local-dir: ./build/
-#           server-dir: ../htdocs/
-#         env:
-#           CI: true
-
-name: Build and Deploy
+name: Node.js CI
 
 on: [push]
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+    strategy:
+      matrix:
+        node-version: [16.15.1]
 
-      - name: Use Node.js 16
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: "16.15.1"
+          node-version: ${{ matrix.node-version }}
 
-      - name: Build Project
-        run: |
-          npm install
-          npm run build -if-present
+      - run: npm install
+      - run: npm run build --if-present
 
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -68,3 +32,5 @@ jobs:
           password: ${{ secrets.ftp_pwd }}
           local-dir: ./build/
           server-dir: ./htdocs/
+        env:
+          CI: true
