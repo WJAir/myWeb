@@ -18,7 +18,7 @@ jobs:
         npm install
         npm run build
   
-  
+
       - name: ✈️ FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
@@ -26,4 +26,4 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PWD }}
           local-dir: ./build/
-          server-dir: ../htdocs/
+          server-dir: ./htdocs/
