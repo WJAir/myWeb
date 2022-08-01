@@ -34,5 +34,3 @@ jobs:
           server-dir: ./htdocs/
         env:
           CI: true
-
-      - name: success
